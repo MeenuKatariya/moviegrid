@@ -116,9 +116,11 @@ var movie_Data=JSON.parse(localStorage.getItem("allData"))|| []
 
     var rating=document.createElement("p");
     rating.textContent=element.rating;
-
+  
+    localStorage.setItem("allData",JSON.stringify(movie))
     box.append(images,name,date,rating);
-    document.querySelector('#container').append(box)
+    document.querySelector('#container').append(box);
+    
   
 
   });
