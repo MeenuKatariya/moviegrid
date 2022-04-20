@@ -1,0 +1,30 @@
+ #signup-form-div{
+    border: 1px solid black;
+    display: flex;
+    width:100%;
+    justify-content:right;
+    gap:2vw;
+}
+#signup-form-div a{
+text-decoration:none;
+color:black;
+font-size: 1.6vw;
+
+}
+#signup{
+padding-right: 1.3vw;
+}
+form{
+border: 1px solid green;
+ width:30%;
+ margin: auto;
+ margin-top: 4vw;
+ padding-left: 12vw;
+ height: 300px;
+}
+#para{
+color:red;
+font-size: 1.6vw;
+margin-left: 0vw;
+
+}
