@@ -94,11 +94,30 @@ var movie=[
 
 
 ]
+var filterData=JSON.parse(JSON.stringify(movie));
+// var movie_Data=JSON.parse(localStorage.getItem("allData"))
 
 
 var movie_Data=JSON.parse(localStorage.getItem("allData"))|| []
+document.querySelector("#sort").addEventListener("change",function(){
+  var sortType=document.querySelector("#sort").value
+  if(sortType=="none")
+  {
+    displayData(movie);
+  }else{
+    filterData.sort(function(a,b){
+      if(sortType=="sort-lh"){
+        return a.rating-b.rating;
+      }
+        return b.rating-a.rating;
+    
+    });
+    displayData(filterData);
+  }
+  });
 
-
+function displayData(movie){
+  document.querySelector("#container").innerHTML="";
   movie.forEach(element => {
       
     var box=document.createElement("div");
@@ -124,4 +143,5 @@ var movie_Data=JSON.parse(localStorage.getItem("allData"))|| []
   
 
   });
-  
+}
+displayData(movie)
