@@ -1,33 +1,24 @@
 
-// var start=1;
-// function set_time()
-// {
-   
-//     setInterval(image_show,1000);
-// }
-// function image_show()
-// {
-//     var image_data;
-// if(start==1)
-// {
-//   image_data="pushpa.jpg"
-// }
-// else if(start==2)
-// {
-//     image_data="mainkgf.jpg"
+var i=0;
+var image=[];
+var time=3000;
+ image[0]="./images/pushpa.jpeg";
+ image[1]="./images/raabta.jpeg";
+ image[2]="./images/bolbachan.jpeg";
+ 
 
-// }else if(start==3)
-// {
-//     image_data="boolywood1.jpg"
-// }else{
-//     start=1;
-// }
-// document.getElementById("data").src=""+image_data;
-// start++;
-// }
+function changeImg(){
+  document.slide.src=image[i];
+  if(i<image.length-1){
+  i++
+  }else{
+    i=0;
+  }
+  setTimeout("changeImg()",time);
+}
 
-
-var movie=[
+window.onload=changeImg;
+ var movie=[
   {
       name:"pushpa",
       release_Date:17-10-2021,
@@ -39,6 +30,7 @@ var movie=[
     release_Date:9-5-2020,
     img_src:"https://igimages.gumlet.io/hindi/gallery/movies/raabta/raaabta_poster.jpg?w=160&dpr=2.6",
     rating:3, 
+
   },
   {
     name:"jaggajass0s",

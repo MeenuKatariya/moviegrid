@@ -45,3 +45,8 @@ p{
     font-size: 1vw;
     
 }
+#image{
+    width:20%;
+    height:100%;
+    margin:auto;
+}

@@ -4,12 +4,12 @@ function loginfn(){
     event.preventDefault();
     var enteremail=document.querySelector("#email").value
     var enterpassword=document.querySelector("#password").value
-    var loginData=JSON.parse(localStorage.getItem("data"));
+    var loginData=JSON.parse(localStorage.getItem("allData"));
     var flag=false;
     loginData.forEach(value => {
           if(value.email==enteremail && value.password==enterpassword)
           {
-                 flag=true
+                 flag =true;
           }
     })
     if(flag)
